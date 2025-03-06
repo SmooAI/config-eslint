@@ -30,23 +30,8 @@ jobs:
         with:
           version: 9
           
-      - name: Install dependencies and generate lockfile
-        run: |
-          if [ ! -f pnpm-lock.yaml ]; then
-            echo "No lockfile found, generating one..."
-            pnpm install --lockfile-only
-            git config --global user.email "roux@smoo.ai"
-            git config --global user.name "Roux"
-            
-            # Fetch and checkout main
-            git fetch origin
-            git checkout -B main origin/main
-            
-            git add pnpm-lock.yaml
-            git commit -m "chore: add pnpm-lock.yaml"
-            git push origin main
-          fi
-          pnpm install
+      - name: Install dependencies
+        run: pnpm install
         
       - name: Type check
         run: |
