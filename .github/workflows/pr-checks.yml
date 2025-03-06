@@ -8,7 +8,7 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    if: contains(github.head_ref, 'smooai-auto-update-') # Updated branch prefix check
+    if: contains(github.head_ref, 'smooai-auto-update-')
 
     steps:
       - uses: actions/checkout@v4
@@ -22,26 +22,8 @@ jobs:
         with:
           version: 9
           
-      - name: Install dependencies and generate lockfile
-        run: |
-          if [ ! -f pnpm-lock.yaml ]; then
-            echo "No lockfile found, generating one..."
-            pnpm install --lockfile-only
-            git config --global user.email "roux@smoo.ai"
-            git config --global user.name "Roux"
-            
-            # Get PR branch name from GitHub context
-            BRANCH_NAME="${GITHUB_HEAD_REF}"
-            
-            # Fetch and checkout the PR branch
-            git fetch origin
-            git checkout -B "$BRANCH_NAME" "origin/$BRANCH_NAME"
-            
-            git add pnpm-lock.yaml
-            git commit -m "chore: add pnpm-lock.yaml"
-            git push origin "$BRANCH_NAME"
-          fi
-          pnpm install
+      - name: Install dependencies
+        run: pnpm install
         
       - name: Type check
         run: |
