@@ -1,0 +1,49 @@
+name: Publish Package
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+      
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+          
+      - name: Install dependencies and generate lockfile
+        run: |
+          if [ ! -f pnpm-lock.yaml ]; then
+            echo "No lockfile found, generating one..."
+            pnpm install --lockfile-only
+            git config --global user.email "smoobot@smoo.ai"
+            git config --global user.name "SmooBot"
+            git add pnpm-lock.yaml
+            git commit -m "chore: add pnpm-lock.yaml"
+            git push
+          fi
+          pnpm install
+        
+      - name: Type check
+        run: pnpm typecheck
+        
+      - name: Lint
+        run: pnpm lint
+        
+      - name: Test
+        run: pnpm test
+
+      - name: Publish to NPM
+        run: pnpm publish --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.SMOOAI_NPM_TOKEN }}
