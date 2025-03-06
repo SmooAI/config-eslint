@@ -107,32 +107,30 @@ jobs:
           git config --global user.email "roux@smoo.ai"
           git config --global user.name "Roux"
 
-          # Create branch for version update with timestamp to ensure uniqueness
+          # Create branch and push with regular git commands (uses GITHUB_TOKEN automatically)
           BRANCH_NAME="version-bump-${NEW_VERSION}-$(date +%s)"
           git checkout -b $BRANCH_NAME
-
-          # Update package.json
+          
           node -e "const pkg=require('./package.json'); pkg.version='$NEW_VERSION'; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n')"
           
-          # Commit and push
           git add package.json
           git commit -m "chore: bump version to $NEW_VERSION"
           git push origin $BRANCH_NAME
 
-          # Create and auto-merge PR
+          # Set GH_TOKEN just for the gh commands
+          export GH_TOKEN="${{ github.token }}"
+          
+          # Create and auto-merge PR using gh
           gh pr create \
             --title "Bump version to $NEW_VERSION" \
             --body "Automated version bump by publish workflow" \
             --base main \
             --head $BRANCH_NAME
 
-          # Wait for checks and merge
           gh pr merge --auto --squash $BRANCH_NAME
 
-          # Wait a moment for merge to complete
           sleep 5
 
-          # Create GitHub release
           gh release create "v${NEW_VERSION}" \
             --title "Release v${NEW_VERSION}" \
             --notes "Release created by publish workflow" \
