@@ -35,6 +35,10 @@ SmooAI is an AI-powered platform for helping businesses multiply their customer,
 
 Learn more on [smoo.ai](https://smoo.ai)
 
+## SmooAI Packages
+
+Check out other SmooAI packages at [npmjs.com/org/smooai](https://www.npmjs.com/org/smooai)
+
 ## About @smooai/config-eslint
 
 Shared ESLint configuration used across SmooAI projects. This package provides a standardized linting configuration to ensure consistent code style and quality across all SmooAI repositories.
