@@ -78,7 +78,12 @@ pnpm lint
 pnpm test
 ```
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contributing
+
+We're currently developing our contribution processes. If you're interested in contributing to this package or have questions, please reach out to us through the contact information below. We appreciate your interest and will provide more detailed contribution guidelines in the future.
 
 <!-- CONTACT -->
 
