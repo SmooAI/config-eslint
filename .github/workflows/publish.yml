@@ -107,10 +107,10 @@ jobs:
           git config --global user.email "roux@smoo.ai"
           git config --global user.name "Roux"
 
-          # Create branch for version update
-          BRANCH_NAME="version-bump-${NEW_VERSION}"
+          # Create branch for version update with timestamp to ensure uniqueness
+          BRANCH_NAME="version-bump-${NEW_VERSION}-$(date +%s)"
           git checkout -b $BRANCH_NAME
-          
+
           # Update package.json
           node -e "const pkg=require('./package.json'); pkg.version='$NEW_VERSION'; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n')"
           
