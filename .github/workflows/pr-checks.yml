@@ -1,0 +1,54 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches: [ main ]
+    types: [ opened, synchronize ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    if: contains(github.head_ref, 'smooai-auto-update-') # Updated branch prefix check
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+          
+      - name: Install dependencies and generate lockfile
+        run: |
+          if [ ! -f pnpm-lock.yaml ]; then
+            echo "No lockfile found, generating one..."
+            pnpm install --lockfile-only
+            git config --global user.email "smoobot@smoo.ai"
+            git config --global user.name "SmooBot"
+            # Get PR branch name from GitHub context
+            BRANCH_NAME="${GITHUB_HEAD_REF}"
+            git checkout -B "$BRANCH_NAME"
+            git add pnpm-lock.yaml
+            git commit -m "chore: add pnpm-lock.yaml"
+            git push origin "$BRANCH_NAME"
+          fi
+          pnpm install
+        
+      - name: Type check
+        run: pnpm typecheck
+        
+      - name: Lint
+        run: pnpm lint
+        
+      - name: Test
+        run: pnpm test
+
+      - name: Auto-merge if checks pass
+        if: success()
+        run: gh pr merge --auto --merge "${{ github.event.pull_request.number }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
