@@ -87,16 +87,44 @@ pnpm test
 
 ## Contributing
 
-We're currently developing our contribution processes. If you're interested in contributing to this package or have questions, please reach out to us through the contact information below. We appreciate your interest and will provide more detailed contribution guidelines in the future.
+Contributions are welcome! This project uses [changesets](https://github.com/changesets/changesets) to manage versions and releases.
+
+### Development Workflow
+
+1. Fork the repository
+2. Create your branch (`git checkout -b amazing-feature`)
+3. Make your changes
+4. Add a changeset to document your changes:
+   ```sh
+   pnpm changeset
+   ```
+   This will prompt you to:
+   - Choose the type of version bump (patch, minor, or major)
+   - Provide a description of the changes
+
+5. Commit your changes (`git commit -m 'Add some amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+### Pull Request Guidelines
+
+- Reference any related issues in your PR description
+
+The maintainers will review your PR and may request changes before merging.
+
 
 <!-- CONTACT -->
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Contact
 
-Brent Rager - [Email](mailto:brent@smoo.ai)
-[Instagram](https://www.instagram.com/brentragertech/)
-[LinkedIn](https://www.linkedin.com/in/brentrager/)
-[Threads](https://www.threads.net/@brentragertech)
+Brent Rager 
+- [Email](mailto:brent@smoo.ai)
+- [LinkedIn](https://www.linkedin.com/in/brentrager/)
+- [BlueSky](https://bsky.app/profile/brentragertech.bsky.social)
+- [TikTok](https://www.tiktok.com/@brentragertech)
+- [Instagram](https://www.instagram.com/brentragertech/)
 
 Smoo Github: [https://github.com/SmooAI](https://github.com/SmooAI)
 
