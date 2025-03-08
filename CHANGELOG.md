@@ -1,5 +1,11 @@
 # @smooai/config-eslint
 
+## 1.0.4
+
+### Patch Changes
+
+- 2f0d136: Fixed the version of @next/eslint-plugin-next.
+
 ## 1.0.3
 
 ### Patch Changes
