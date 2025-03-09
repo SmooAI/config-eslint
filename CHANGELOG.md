@@ -1,5 +1,12 @@
 # @smooai/config-eslint
 
+## 1.0.5
+
+### Patch Changes
+
+- e6bfa03: Fix pnpm lock.
+- 6fe67b5: Fix package.json that was not checked in.
+
 ## 1.0.4
 
 ### Patch Changes
