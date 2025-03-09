@@ -1,7 +1,7 @@
 {
   "name": "@smooai/config-eslint",
   "version": "1.0.7",
-  "description": "ESLint configurations for SmooAI",
+  "description": "Shared ESLint configuration used across SmooAI projects. This package provides a standardized linting configuration to ensure consistent code style and quality across all SmooAI repositories.",
   "type": "module",
   "repository": {
     "type": "git",
