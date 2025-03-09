@@ -1,5 +1,11 @@
 # @smooai/config-eslint
 
+## 1.0.7
+
+### Patch Changes
+
+- 3131aa3: Added badges.
+
 ## 1.0.6
 
 ### Patch Changes
