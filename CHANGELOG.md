@@ -1,5 +1,11 @@
 # @smooai/config-eslint
 
+## 1.0.6
+
+### Patch Changes
+
+- 1a077db: Added prettier and @vercel/style-guide as peer dependencies.
+
 ## 1.0.5
 
 ### Patch Changes
