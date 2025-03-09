@@ -24,6 +24,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.28.1",
     "@next/eslint-plugin-next": "^14.2.24",
+    "@vercel/style-guide": "^6.0.0",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.2",
     "eslint-plugin-only-warn": "^1.1.0",
@@ -32,11 +33,14 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-turbo": "^2.4.4",
     "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-packagejson": "^2.5.10",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
     "@eslint/js": "^9.21.0",
     "@next/eslint-plugin-next": "^14.2.24",
+    "@vercel/style-guide": "^6.0.0",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.2",
     "eslint-plugin-only-warn": "^1.1.0",
@@ -44,6 +48,8 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-turbo": "^2.4.4",
+    "prettier": "^3.5.3",
+    "prettier-plugin-packagejson": "^2.5.10",
     "typescript": ">=5.0.0",
     "typescript-eslint": "^8.26.0"
   },
