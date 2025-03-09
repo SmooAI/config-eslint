@@ -1,5 +1,11 @@
 # @smooai/config-eslint
 
+## 1.0.8
+
+### Patch Changes
+
+- c2354b7: Updated package description.
+
 ## 1.0.7
 
 ### Patch Changes
