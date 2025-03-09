@@ -43,6 +43,14 @@ Check out other SmooAI packages at [npmjs.com/org/smooai](https://www.npmjs.com/
 
 Shared ESLint configuration used across SmooAI projects. This package provides a standardized linting configuration to ensure consistent code style and quality across all SmooAI repositories.
 
+![NPM Version](https://img.shields.io/npm/v/%40smooai%2Fconfig-eslint?style=for-the-badge)
+![NPM Downloads](https://img.shields.io/npm/dw/%40smooai%2Fconfig-eslint?style=for-the-badge)
+![NPM Last Update](https://img.shields.io/npm/last-update/%40smooai%2Fconfig-eslint?style=for-the-badge)
+
+![GitHub License](https://img.shields.io/github/license/SmooAI/config-eslint?style=for-the-badge)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/SmooAI/config-eslint/release.yml?style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/SmooAI/config-eslint?style=for-the-badge)
+
 ### Installation
 
 ```sh
