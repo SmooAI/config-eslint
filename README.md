@@ -90,7 +90,6 @@ pnpm lint
 pnpm test
 ```
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contributing
@@ -103,12 +102,15 @@ Contributions are welcome! This project uses [changesets](https://github.com/cha
 2. Create your branch (`git checkout -b amazing-feature`)
 3. Make your changes
 4. Add a changeset to document your changes:
-   ```sh
-   pnpm changeset
-   ```
-   This will prompt you to:
-   - Choose the type of version bump (patch, minor, or major)
-   - Provide a description of the changes
+
+    ```sh
+    pnpm changeset
+    ```
+
+    This will prompt you to:
+
+    - Choose the type of version bump (patch, minor, or major)
+    - Provide a description of the changes
 
 5. Commit your changes (`git commit -m 'Add some amazing feature'`)
 6. Push to the branch (`git push origin feature/amazing-feature`)
@@ -120,14 +122,14 @@ Contributions are welcome! This project uses [changesets](https://github.com/cha
 
 The maintainers will review your PR and may request changes before merging.
 
-
 <!-- CONTACT -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
 
-Brent Rager 
+Brent Rager
+
 - [Email](mailto:brent@smoo.ai)
 - [LinkedIn](https://www.linkedin.com/in/brentrager/)
 - [BlueSky](https://bsky.app/profile/brentragertech.bsky.social)
