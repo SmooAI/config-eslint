@@ -1,5 +1,11 @@
 # @smooai/config-eslint
 
+## 1.0.9
+
+### Patch Changes
+
+- ab72565: Update author / bugs / homepage.
+
 ## 1.0.8
 
 ### Patch Changes
