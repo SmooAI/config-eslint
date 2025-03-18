@@ -1,5 +1,11 @@
 # @smooai/config-eslint
 
+## 1.0.10
+
+### Patch Changes
+
+- 7439abb: Fix publish for Github releases.
+
 ## 1.0.9
 
 ### Patch Changes
