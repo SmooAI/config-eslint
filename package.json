@@ -31,7 +31,7 @@
         "./vite": "./vite.js"
     },
     "scripts": {
-        "ci:publish": "pnpm publish -r",
+        "ci:publish": "pnpm changeset publish",
         "format": "prettier --write \"**/*.{ts,tsx,md,json,js,cjs,mjs}\"",
         "preinstall": "npx only-allow pnpm"
     },
