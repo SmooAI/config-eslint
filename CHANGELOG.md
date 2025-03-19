@@ -1,5 +1,11 @@
 # @smooai/config-eslint
 
+## 1.0.11
+
+### Patch Changes
+
+- 55cbcda: Update dependencies.
+
 ## 1.0.10
 
 ### Patch Changes
