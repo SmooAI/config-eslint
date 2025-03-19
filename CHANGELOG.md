@@ -1,5 +1,11 @@
 # @smooai/config-eslint
 
+## 1.0.12
+
+### Patch Changes
+
+- bc7f915: Upgraded to Node 22.
+
 ## 1.0.11
 
 ### Patch Changes
