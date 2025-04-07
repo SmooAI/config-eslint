@@ -1,5 +1,11 @@
 # @smooai/config-eslint
 
+## 1.0.13
+
+### Patch Changes
+
+- 245e5c3: Update prettier plugins.
+
 ## 1.0.12
 
 ### Patch Changes
