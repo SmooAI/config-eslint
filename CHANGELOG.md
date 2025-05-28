@@ -1,5 +1,11 @@
 # @smooai/config-eslint
 
+## 1.0.14
+
+### Patch Changes
+
+- 8fd68bc: Add eslint-plugin-depend to suggest better / faster tools.
+
 ## 1.0.13
 
 ### Patch Changes
