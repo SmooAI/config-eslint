@@ -1,5 +1,11 @@
 # @smooai/config-eslint
 
+## 1.0.15
+
+### Patch Changes
+
+- b9f78f5: Fix eslint-plugin-depend.
+
 ## 1.0.14
 
 ### Patch Changes
