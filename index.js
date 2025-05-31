@@ -29,11 +29,11 @@ export const config = [
             onlyWarn,
         },
     },
+    depend.configs.recommended,
     {
         plugins: {
             depend,
         },
-        extends: ['depend/flat/recommended'],
     },
     {
         ignores: ['dist/**'],
