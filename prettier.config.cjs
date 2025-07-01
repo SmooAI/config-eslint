@@ -7,5 +7,11 @@ module.exports = {
     printWidth: 160,
     semi: true,
     trailingComma: 'all',
-    plugins: ['prettier-plugin-organize-imports', '@ianvs/prettier-plugin-sort-imports', 'prettier-plugin-packagejson', 'prettier-plugin-css-order', 'prettier-plugin-tailwindcss',],
+    plugins: [
+        'prettier-plugin-organize-imports',
+        '@ianvs/prettier-plugin-sort-imports',
+        'prettier-plugin-packagejson',
+        'prettier-plugin-css-order',
+        'prettier-plugin-tailwindcss',
+    ],
 };
