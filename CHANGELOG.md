@@ -1,5 +1,12 @@
 # @smooai/config-eslint
 
+## 1.0.17
+
+### Patch Changes
+
+- 8520d7c: Added prettier-plugin-organize-imports.
+- 8520d7c: Remove unused imports.
+
 ## 1.0.16
 
 ### Patch Changes
